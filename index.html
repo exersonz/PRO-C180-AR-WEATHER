@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no"/>
+
+        <title>AR Weather</title>
+
+        <!-- JQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"
+            integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf"
+            crossorigin="anonymous"></script>    
+
+        <!-- Mapbox -->
+        <link href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css" rel="stylesheet">
+        <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
+
+        <!-- Mapbox Geocoder Plugin -->
+        <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+        <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
+
+        <!-- Promise polyfill script required to use Mapbox GL Geocoder in IE 11 --> 
+        <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Body HTML -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 text-center p-5">
+                    <h1>AR WEATHER</h1>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                    <div id="map"></div>
+                </div>
+            </div>
+            <div>
+                <img id="arch" class="image-marker" src="./assets/gateway_arch.jpg">
+                <img id="sphinx" class="image-marker" src="./assets/great_sphinx.jpg">
+                <img id="liberty" class="image-marker" src="./assets/liberty.jpg">
+                <img id="mermaid" class="image-marker" src="./assets/little_mermaid.jpg">
+                <img id="taj_mahal" class="image-marker" src="./assets/taj_mahal.jpg">
+            </div>
+        </div>
+
+        <div class="text-center">
+            <button id="navigate_button" class="btn btn-dark">Show Me The Weather!</button>
+        </div>
+
+        <!-- CSS and JS -->
+        <link rel="stylesheet" href="./style.css"/>
+        <script src="./main.js" type="text/javascript"></script>
+    </body>
+</html>
